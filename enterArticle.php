@@ -1,6 +1,15 @@
+
+
+
 <?php
 include 'dbh.php';
 session_start();
+
+if($_COOKIE["user"]){
+ 	$name = $_COOKIE["user"];
+ } else{
+ 	header("location: login.php");
+ }
 
 $title = $_POST["title"];
 $sdesc = $_POST["sdesc"];
@@ -16,3 +25,4 @@ if($conn->query($sql) === TRUE ){
 }
 
 ?>
+
