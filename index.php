@@ -1,6 +1,12 @@
 <?php
  include 'dbh.php';
-
+session_start();
+ 
+ if($_COOKIE["user"]){
+ 	$name = $_COOKIE["user"];
+ } else{
+ 	header("location: login.php");
+ }
  $sql = "SELECT title,description,releaseDate from articles";
 
  $result = $conn->query($sql);

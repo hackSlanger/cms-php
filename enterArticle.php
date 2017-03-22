@@ -1,5 +1,6 @@
 <?php
 include 'dbh.php';
+session_start();
 
 $title = $_POST["title"];
 $sdesc = $_POST["sdesc"];
