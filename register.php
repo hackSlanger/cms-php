@@ -2,6 +2,12 @@
 
 include 'dbh.php';
 session_start();
+
+if($_COOKIE["user"]){
+ 	$name = $_COOKIE["user"];
+ 	header("location: index.php");
+ } 
+
 ?>
 
 <!DOCTYPE html>

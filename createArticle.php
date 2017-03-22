@@ -1,3 +1,13 @@
+<?php
+	session_start();
+	include 'dbh.php';
+
+	if($_COOKIE["user"]){
+ 	$name = $_COOKIE["user"];
+ } else{
+ 	header("location: login.php");
+ }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,16 +29,7 @@ include 'navbar.php';
 ?>
  <h3>Enter New Brain Game</h3>
 
-<?php
-	session_start();
-	include 'dbh.php';
 
-	if($_COOKIE["user"]){
- 	$name = $_COOKIE["user"];
- } else{
- 	header("location: login.php");
- }
-?>
 
 <form method="post" action="enterArticle.php">
 	<input type="text" name="title" placeholder="Title" class="form-control"><br>

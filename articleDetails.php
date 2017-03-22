@@ -1,3 +1,9 @@
+<?php
+session_start();
+include 'dbh.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +24,6 @@ include 'navbar.php';
 ?>
 
 <?php
-
-include 'dbh.php';
-session_start();
 
 $id = $_GET["id"];
 

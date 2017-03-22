@@ -1,6 +1,3 @@
-
-
-
 <?php
 include 'dbh.php';
 session_start();
@@ -25,4 +22,3 @@ if($conn->query($sql) === TRUE ){
 }
 
 ?>
-

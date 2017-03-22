@@ -1,7 +1,14 @@
 <?php
-include 'dbh.php';
+
+setcookie("user","", time()-3600,"/");
 session_start();
-setcookie("user", "", time() - 3600);
-session_destroy();
+
+// remove all session variables
+session_unset(); 
+
+// destroy the session 
+session_destroy(); 
+
+header("location: login.php");
 
 ?>

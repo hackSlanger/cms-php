@@ -1,3 +1,7 @@
+<?php
+ include 'dbh.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,11 +21,7 @@
 include 'navbar.php';
 ?>
 
-<?php
- include 'dbh.php';
-session_start();
- 
- 
+<?php 
  $sql = "SELECT id,title,description,releaseDate from articles";
 
  $result = $conn->query($sql);

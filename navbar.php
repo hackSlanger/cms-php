@@ -1,7 +1,7 @@
 <div class="container">
 
       <!-- Static navbar -->
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -20,6 +20,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="createArticle.php">Create New Article</a></li>
+              <li><a href="logout.php">Logout</a></li>
               
             </ul>
           </div><!--/.nav-collapse -->
