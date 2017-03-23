@@ -20,8 +20,25 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="createArticle.php">Create New Article</a></li>
-              <li><a href="logout.php">Logout</a></li>
-              <li style="color:white;"><a>Logged In as : <?php echo $_COOKIE["user"] ?></a></li>
+          
+
+              <li style="color:white;">
+                <?php
+                  if (isset($_COOKIE["user"])) {
+                    echo "<a href=\"logout.php\">Logout</a>";
+                  } else{
+                    echo "<a href=\"login.php\">Sign In</a>";
+                  }
+                ?>
+              </li>
+
+              <li style="color:white;">
+                <?php
+                  if (isset($_COOKIE["user"])) {
+                    echo "<a>Logged In as : ".$_COOKIE['user']."</a>";
+                  }
+                ?>
+              </li>
               
             </ul>
           </div><!--/.nav-collapse -->
