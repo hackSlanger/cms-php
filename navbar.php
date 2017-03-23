@@ -21,6 +21,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="createArticle.php">Create New Article</a></li>
               <li><a href="logout.php">Logout</a></li>
+              <li style="color:white;"><a>Logged In as : <?php echo $_COOKIE["user"] ?></a></li>
               
             </ul>
           </div><!--/.nav-collapse -->
